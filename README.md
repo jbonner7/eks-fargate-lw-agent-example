@@ -62,15 +62,14 @@ mapRoles: |
 
 If user, not role, add the following and replace the last section with:
 
+ ```yaml 
 mapUsers: |
   - userarn: arn:aws:iam::XXXXXXXXXXXX:user/testuser
-    
     username: testuser
-    
     groups:
     - system:bootstrappers
     - system:nodes
-    - eks-console-dashboard-full-access-group
+    - eks-console-dashboard-full-access-group```
 
 #Create Fargate profile and namespace for deploying pods. In the sample YAML files, the namespace is "fargate-ns"
 eksctl create fargateprofile  --cluster jb-fargate-cluster  --name test  --namespace fargate-ns
