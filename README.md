@@ -69,7 +69,7 @@ mapUsers: |
     groups:
     - system:bootstrappers
     - system:nodes
-    - eks-console-dashboard-full-access-group```
+    - eks-console-dashboard-full-access-group```yaml
 
 #Create Fargate profile and namespace for deploying pods. In the sample YAML files, the namespace is "fargate-ns"
 eksctl create fargateprofile  --cluster jb-fargate-cluster  --name test  --namespace fargate-ns
