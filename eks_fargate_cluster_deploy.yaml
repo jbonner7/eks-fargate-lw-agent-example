@@ -4,8 +4,8 @@ apiVersion: eksctl.io/v1alpha5
 kind: ClusterConfig
 
 metadata:
-  name: jb-fargate-cluster
-  region: eu-west-1
+  name: <name>
+  region: <region>
 
 nodeGroups:
   - name: ng-1
@@ -13,7 +13,7 @@ nodeGroups:
     desiredCapacity: 1
 
 fargateProfiles:
-  - name: jb-fp-default
+  - name: <name>
     selectors:
       # All workloads in the "default" Kubernetes namespace will be
       # scheduled onto Fargate:
