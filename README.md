@@ -93,6 +93,10 @@ mapUsers: |
 
 #Deploy lw-agent ConfigMap
 
+```kubectl apply -f lw_configmap.yaml```
+
+#Deploy RBAC rules for the Agent
+
 ```kubectl apply -f clusterrole_for_agent.yaml```
 
 #Deploy Fargate pod for first app. This will be the app that runs the agent as a sidecar. In the YAML file, this is "app"
