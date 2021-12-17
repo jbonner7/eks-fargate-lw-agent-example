@@ -39,7 +39,7 @@ kubectl edit configmap aws-auth -n kube-system
 
 
 #Multiple Roles - Copy this format and paste into auth ConfigMap. Replace the two IAM roles that were automatically created and added to the auth ConfigMap. Add the portal user at the bottom
-'mapRoles: |
+mapRoles: |
     - rolearn: arn:aws:iam::<Account_Arn>:role/<auto_created_role>
       username: system:node:{{EC2PrivateDNSName}}
       groups:
@@ -56,7 +56,7 @@ kubectl edit configmap aws-auth -n kube-system
       username: <username>
       groups:
         - system:masters
-        - eks-console-dashboard-full-access-group'
+        - eks-console-dashboard-full-access-group
 
 If user, not role, add the following and replace the last section with:
 
