@@ -41,6 +41,7 @@ kubectl edit configmap aws-auth -n kube-system
 
 #Multiple Roles - Copy this format and paste into auth ConfigMap. Replace the two IAM roles that were automatically created and added to the auth ConfigMap. Add the portal user at the bottom
 
+```yaml
 mapRoles: |
   - rolearn: arn:aws:iam::<Account_Arn>:role/<auto_created_role>
     username: system:node:{{EC2PrivateDNSName}}
@@ -59,6 +60,7 @@ mapRoles: |
     groups:
     - system:masters
     - eks-console-dashboard-full-access-group
+ ```
 
 If user, not role, add the following and replace the last section with:
 
@@ -69,7 +71,8 @@ mapUsers: |
     groups:
     - system:bootstrappers
     - system:nodes
-    - eks-console-dashboard-full-access-group```yaml
+    - eks-console-dashboard-full-access-group
+```
 
 #Create Fargate profile and namespace for deploying pods. In the sample YAML files, the namespace is "fargate-ns"
 eksctl create fargateprofile  --cluster jb-fargate-cluster  --name test  --namespace fargate-ns
