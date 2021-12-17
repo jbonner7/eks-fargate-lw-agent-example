@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  namespace: fargate-ns
+  name: lacework-config
+data:
+  config.json: |
+    {"tokens":{"AccessToken":"YOUR ACCESS TOKEN"}, "tags":{"Env":"k8s", "KubernetesCluster": "eksclustername"}, "serverurl":"server url if not default"}
