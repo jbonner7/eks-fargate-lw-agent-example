@@ -40,6 +40,7 @@ kubectl edit configmap aws-auth -n kube-system
 
 
 #Multiple Roles - Copy this format and paste into auth ConfigMap. Replace the two IAM roles that were automatically created and added to the auth ConfigMap. Add the portal user at the bottom
+
 mapRoles: |
     - rolearn: arn:aws:iam::<Account_Arn>:role/<auto_created_role>
       username: system:node:{{EC2PrivateDNSName}}
