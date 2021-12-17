@@ -11,6 +11,7 @@
 OR
 ```./aws/install --bin-dir /usr/bin --install-dir /usr/bin/aws-cli --update```
 
+#Configure your AWS CLI
 
 #Install kubectl
 
