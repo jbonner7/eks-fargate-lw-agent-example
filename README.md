@@ -52,7 +52,7 @@ https://aws.amazon.com/premiumsupport/knowledge-center/eks-kubernetes-object-acc
 ```kubectl edit configmap aws-auth -n kube-system```
 
 
-#Multiple Roles - Copy this format and paste into auth ConfigMap. Replace the two IAM roles that were automatically created and added to the auth ConfigMap. Add the portal user at the bottom
+#Multiple Roles - Copy this format and paste into auth ConfigMap, removing the existing mapRoles segment. Make sure to take note of the auto-gen roles and copy them. Replace with the two IAM roles that were automatically created and added to the auth ConfigMap. Add the portal user at the bottom
 
 ```yaml
 mapRoles: |
