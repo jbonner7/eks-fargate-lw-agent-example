@@ -89,7 +89,7 @@ mapUsers: |
 
 #Create Fargate profile and namespace for deploying pods. In the sample YAML files, the namespace is "fargate-ns"
 
-```eksctl create fargateprofile  --cluster jb-fargate-cluster  --name test  --namespace fargate-ns```
+```eksctl create fargateprofile  --cluster <cluster name>  --name test  --namespace fargate-ns```
 
 #Deploy lw-agent ConfigMap
 
