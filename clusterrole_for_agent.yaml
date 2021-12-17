@@ -1,0 +1,38 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: agent-pod-full-access-clusterrole
+rules:
+  - apiGroups:
+      - ""
+    resources:
+      - nodes
+      - pods
+      - nodes/metrics
+      - nodes/spec
+      - nodes/stats
+      - nodes/proxy
+      - nodes/pods
+      - nodes/healthz
+    verbs:
+      - get
+      - list
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: agent-pod-full-access-binding
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: agent-pod-full-access-clusterrole
+subjects:
+  - kind: ServiceAccount
+    name: lwagent-sa
+    namespace: fargte-ns
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: lwagent-sa
+  namespace: fargate-ns
