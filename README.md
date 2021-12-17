@@ -54,7 +54,7 @@ mapRoles: |
         - system:nodes
         - system:node-proxier
     - rolearn: arn:aws:iam::<Account_Arn>:role/portal role
-      username: joshua.bonner@lacework.net
+      username: <user>
       groups:
         - system:masters
         - eks-console-dashboard-full-access-group
