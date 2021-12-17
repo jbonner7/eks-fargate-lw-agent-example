@@ -1,4 +1,5 @@
 #Sample EKS Deployment
+#This attempts to deploy the LW Agent as it's own container in a pod rather than a sidecar
 
 #Spin up EC2 for master node (optional)
 #Download AWS CLI
