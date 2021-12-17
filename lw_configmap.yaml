@@ -5,4 +5,4 @@ metadata:
   name: lacework-config
 data:
   config.json: |
-    {"tokens":{"AccessToken":"YOUR ACCESS TOKEN"}, "tags":{"Env":"k8s", "KubernetesCluster": "eksclustername"}, "serverurl":"server url if not default"}
+    {"tokens":{"AccessToken":"YOUR ACCESS TOKEN"}, "tags":{"Env":"k8s", "KubernetesCluster": "eksclustername"}}
