@@ -64,6 +64,7 @@ If user, not role, add the following and replace the last section with:
 
 mapUsers: |
   - userarn: arn:aws:iam::XXXXXXXXXXXX:user/testuser
+    
     username: testuser
     
     groups:
