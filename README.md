@@ -102,3 +102,7 @@ mapUsers: |
 #Deploy Fargate pod for second app. This will be the app that runs the agent in it's own container and deploys a second nginx container in the pod. In the YAML file, this is "app2"
 
 ```kubectl apply -f agent_container_pod_spec.yaml```
+
+#Deploy an ALB in AWS to reach your nginx app
+
+```kubectl expose pod <app> --port=80 --type=LoadBalancer -n fargate-ns```
